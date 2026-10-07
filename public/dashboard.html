@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <nav class="sidebar">
+    <a class="side-brand" href="dashboard.html">
+      <span class="brand-mark">SA</span>
+      <span>Attendance<br>System</span>
+    </a>
+    <div class="nav">
+      <a data-page="dashboard" href="dashboard.html">⌂ Dashboard</a>
+      <a data-page="students" href="students.html">👨‍🎓 Students</a>
+      <a data-page="attendance" href="attendance.html">✓ Attendance</a>
+      <a data-page="reports" href="reports.html">▤ Reports</a>
+      <a data-page="settings" href="settings.html">⚙ Settings</a>
+      <a href="index.html">↩ Home</a>
+    </div>
+    <div class="side-user">
+      <span class="avatar">AD</span>
+      <div>
+        <b>Administrator</b>
+        <small>Demo Account</small>
+      </div>
+    </div>
+  </nav>
+
+  <div class="app-main">
+    <header class="app-top">
+      <span id="mobileTitle" class="brand dark">Attendance System</span>
+      <span></span>
+      <div class="top-actions">
+        <span id="liveDate"></span>
+        <button id="logoutBtn" class="btn outline small">Logout</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="page-heading">
+        <div>
+          <span class="eyebrow">OVERVIEW</span>
+          <h1>Dashboard</h1>
+          <p>Monitor student attendance at a glance.</p>
+        </div>
+        <a class="btn primary" href="attendance.html">+ Mark Attendance</a>
+      </div>
+
+      <section class="stats">
+        <div><span>Total Students</span><b id="totalStudents">0</b></div>
+        <div><span>Present Today</span><b id="presentToday">0</b></div>
+        <div><span>Absent Today</span><b id="absentToday">0</b></div>
+        <div><span>Attendance Rate</span><b id="attendanceRate">0%</b></div>
+      </section>
+
+      <div class="two">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Today's Attendance</h2>
+              <p id="todayLabel"></p>
+            </div>
+            <a class="link" href="attendance.html">Manage →</a>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Reg. No.</th>
+                  <th>Course</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="dashboardAttendance">
+                <tr><td colspan="4" class="loading">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Quick Actions</h2>
+              <p>Common tasks</p>
+            </div>
+          </div>
+          <a class="quick" href="students.html">👨‍🎓 <span><b>Manage Students</b><small>Add or update student records</small></span>→</a>
+          <a class="quick" href="attendance.html">📋 <span><b>Record Attendance</b><small>Mark today's class attendance</small></span>→</a>
+          <a class="quick" href="reports.html">📊 <span><b>View Reports</b><small>Check attendance performance</small></span>→</a>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

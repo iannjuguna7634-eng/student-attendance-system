@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings | Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <nav class="sidebar">
+    <a class="side-brand" href="dashboard.html">
+      <span class="brand-mark">SA</span>
+      <span>Attendance<br>System</span>
+    </a>
+    <div class="nav">
+      <a data-page="dashboard" href="dashboard.html">⌂ Dashboard</a>
+      <a data-page="students" href="students.html">👨‍🎓 Students</a>
+      <a data-page="attendance" href="attendance.html">✓ Attendance</a>
+      <a data-page="reports" href="reports.html">▤ Reports</a>
+      <a data-page="settings" href="settings.html">⚙ Settings</a>
+      <a href="index.html">↩ Home</a>
+    </div>
+    <div class="side-user">
+      <span class="avatar">AD</span>
+      <div>
+        <b>Administrator</b>
+        <small>Demo Account</small>
+      </div>
+    </div>
+  </nav>
+
+  <div class="app-main">
+    <header class="app-top">
+      <span id="mobileTitle" class="brand dark">Attendance System</span>
+      <span></span>
+      <div class="top-actions">
+        <span id="liveDate"></span>
+        <button id="logoutBtn" class="btn outline small">Logout</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="page-heading">
+        <div>
+          <span class="eyebrow">SYSTEM</span>
+          <h1>Settings</h1>
+          <p>System information and data export.</p>
+        </div>
+      </div>
+
+      <section class="panel settings">
+        <div>
+          <div>
+            <h2>Demo account</h2>
+            <p>Administrator access is enabled.</p>
+          </div>
+          <span class="pill success">Active</span>
+        </div>
+        <div>
+          <div>
+            <h2>Database</h2>
+            <p>Data is stored in SQLite on the server.</p>
+          </div>
+          <span class="pill">SQLite</span>
+        </div>
+        <div>
+          <div>
+            <h2>Backend</h2>
+            <p>Node.js + Express REST API</p>
+          </div>
+          <span class="pill">Running</span>
+        </div>
+        <div>
+          <div>
+            <h2>Export data</h2>
+            <p>Download students and attendance as JSON.</p>
+          </div>
+          <button id="exportData" class="btn outline">Export JSON</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

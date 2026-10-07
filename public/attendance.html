@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attendance | Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <nav class="sidebar">
+    <a class="side-brand" href="dashboard.html">
+      <span class="brand-mark">SA</span>
+      <span>Attendance<br>System</span>
+    </a>
+    <div class="nav">
+      <a data-page="dashboard" href="dashboard.html">⌂ Dashboard</a>
+      <a data-page="students" href="students.html">👨‍🎓 Students</a>
+      <a data-page="attendance" href="attendance.html">✓ Attendance</a>
+      <a data-page="reports" href="reports.html">▤ Reports</a>
+      <a data-page="settings" href="settings.html">⚙ Settings</a>
+      <a href="index.html">↩ Home</a>
+    </div>
+    <div class="side-user">
+      <span class="avatar">AD</span>
+      <div>
+        <b>Administrator</b>
+        <small>Demo Account</small>
+      </div>
+    </div>
+  </nav>
+
+  <div class="app-main">
+    <header class="app-top">
+      <span id="mobileTitle" class="brand dark">Attendance System</span>
+      <span></span>
+      <div class="top-actions">
+        <span id="liveDate"></span>
+        <button id="logoutBtn" class="btn outline small">Logout</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="page-heading">
+        <div>
+          <span class="eyebrow">DAILY RECORD</span>
+          <h1>Attendance</h1>
+          <p>Mark and manage attendance for a selected date.</p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <div class="attendance-toolbar">
+          <label>Date
+            <input id="attendanceDate" type="date">
+          </label>
+          <div class="attendance-summary">
+            <span id="attendancePresent">0 Present</span>
+            <span id="attendanceAbsent">0 Absent</span>
+            <span id="attendanceLate">0 Late</span>
+          </div>
+        </div>
+        <input id="attendanceSearch" class="search full-search" type="search" placeholder="Search student...">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Student</th>
+                <th>Reg. No.</th>
+                <th>Course</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="attendanceTable">
+              <tr><td colspan="5" class="loading">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel-footer">
+          <p id="attendanceMessage" class="message"></p>
+          <button id="saveAttendance" class="btn primary">Save Attendance</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

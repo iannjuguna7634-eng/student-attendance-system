@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <div class="login-shell">
+    <a class="brand dark" href="index.html">
+      <span class="brand-mark">SA</span>
+      <span>Attendance System</span>
+    </a>
+    <div class="login-card">
+      <div class="login-icon">🔐</div>
+      <h1>Welcome back</h1>
+      <p>Sign in to access the attendance dashboard.</p>
+      <form id="loginForm">
+        <label>Username
+          <input id="username" required placeholder="Enter username" autocomplete="username">
+        </label>
+        <label>Password
+          <input id="password" type="password" required placeholder="Enter password" autocomplete="current-password">
+        </label>
+        <button class="btn primary lg full">Sign In</button>
+      </form>
+      <div class="demo-box">
+        <strong>Demo credentials</strong>
+        <span>Username: admin</span>
+        <span>Password: 1234</span>
+      </div>
+      <p id="loginMessage" class="message"></p>
+      <a class="back" href="index.html">← Back to home</a>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Students | Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-shell">
+  <nav class="sidebar">
+    <a class="side-brand" href="dashboard.html">
+      <span class="brand-mark">SA</span>
+      <span>Attendance<br>System</span>
+    </a>
+    <div class="nav">
+      <a data-page="dashboard" href="dashboard.html">⌂ Dashboard</a>
+      <a data-page="students" href="students.html">👨‍🎓 Students</a>
+      <a data-page="attendance" href="attendance.html">✓ Attendance</a>
+      <a data-page="reports" href="reports.html">▤ Reports</a>
+      <a data-page="settings" href="settings.html">⚙ Settings</a>
+      <a href="index.html">↩ Home</a>
+    </div>
+    <div class="side-user">
+      <span class="avatar">AD</span>
+      <div>
+        <b>Administrator</b>
+        <small>Demo Account</small>
+      </div>
+    </div>
+  </nav>
+
+  <div class="app-main">
+    <header class="app-top">
+      <span id="mobileTitle" class="brand dark">Attendance System</span>
+      <span></span>
+      <div class="top-actions">
+        <span id="liveDate"></span>
+        <button id="logoutBtn" class="btn outline small">Logout</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="page-heading">
+        <div>
+          <span class="eyebrow">RECORDS</span>
+          <h1>Students</h1>
+          <p>Register and manage students.</p>
+        </div>
+        <button id="openStudentModal" class="btn primary">+ Add Student</button>
+      </div>
+
+      <section class="panel">
+        <div class="toolbar">
+          <strong><span id="studentCount">0</span> students</strong>
+          <input id="studentSearch" class="search" type="search" placeholder="Search by name, reg. no. or course...">
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Registration No.</th>
+                <th>Course / Class</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentsTable">
+              <tr><td colspan="4" class="loading">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div id="studentModal" class="modal hidden">
+        <div class="modal-card">
+          <div class="modal-head">
+            <div>
+              <h2 id="studentModalTitle">Add Student</h2>
+              <p>Enter student details.</p>
+            </div>
+            <button class="close" data-close>×</button>
+          </div>
+          <form id="studentForm">
+            <input type="hidden" id="editStudentId">
+            <label>Student Name
+              <input id="studentName" required>
+            </label>
+            <label>Registration Number
+              <input id="studentReg" required>
+            </label>
+            <label>Course / Class
+              <input id="studentCourse" required>
+            </label>
+            <div class="modal-actions">
+              <button type="button" class="btn outline" data-close>Cancel</button>
+              <button class="btn primary">Save Student</button>
+            </div>
+            <p id="studentMessage" class="message"></p>
+          </form>
+        </div>
+      </div>
+
+      <div id="confirmModal" class="modal hidden">
+        <div class="modal-card small-card">
+          <div class="modal-head">
+            <div>
+              <h2>Delete Student</h2>
+              <p>This cannot be undone.</p>
+            </div>
+            <button class="close" data-close>×</button>
+          </div>
+          <p>Are you sure you want to remove this student?</p>
+          <div class="modal-actions">
+            <button class="btn outline" data-close>Cancel</button>
+            <button id="confirmDelete" class="btn danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
