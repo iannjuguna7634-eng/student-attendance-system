@@ -18,10 +18,6 @@
 - JSON data export
 - Responsive design (mobile friendly)
 
-## Demo Login
-
-- **Username:** `admin`
-- **Password:** `1234`
 
 ## How to Run Locally
 
